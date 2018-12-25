@@ -44,7 +44,7 @@ public class VentanaCliente extends JInternalFrame
     private Consultas cons;
     
     public VentanaCliente(Consultas cons){
-        super("Locations",true,true,true,true);
+        super("CLIENTES",true,true,true,true);
         this.cons=cons;
         this.iniciaComponentes();
         this.setSize(600,450);
