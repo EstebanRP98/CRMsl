@@ -35,7 +35,7 @@ public class Consultas {
     }
     public void InsertarClientes(String codigo,String apellido, String nombre, String telefono, String email){
         try{
-            this.sentencia=this.con.getConexion().prepareStatement("insert into hr.regions(REGION_ID,REGION_NAME) values(?,?)");
+            this.sentencia=this.con.getConexion().prepareStatement("insert into hr.clientes(CLIENTE_CODIGO,CLIENTE_APELLIDO, CLIENTE_NOMBRE, CLIENTE_TELEFONO, CLIENTE_EMAIL) values(?,?,?,?,?)");
             this.sentencia.setString(1, codigo);
             this.sentencia.setString(2, apellido);
             this.sentencia.setString(3, nombre);
