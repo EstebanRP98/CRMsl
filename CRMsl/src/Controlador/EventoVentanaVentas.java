@@ -33,7 +33,16 @@ public class EventoVentanaVentas implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         if (e.getSource().equals(this.ventanaVentas.getBotonList().get(1))){
+            this.ventanaVentas.getTxtList().get(2).setText(""); //Codigo
+            this.ventanaVentas.getTxtList().get(3).setText(""); //Descripcion
+            this.ventanaVentas.getTxtList().get(4).setText(""); //Precio
+            this.ventanaVentas.getTxtList().get(5).setText(""); //Cantidad
+            this.ventanaVentas.getTxtList().get(6).setText(""); //SubTotal
+        }
+        if (e.getSource().equals(this.ventanaVentas.getBotonList().get(0))){
+            
+        }
     }
     
 }

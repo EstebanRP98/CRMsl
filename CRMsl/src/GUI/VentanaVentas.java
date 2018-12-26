@@ -132,19 +132,7 @@ public class VentanaVentas extends JFrame{
     }
     
     public DefaultTableModel cargarTabla(){
-        for(int i=this.modeloTabla.getRowCount()-1;i>=0;i--){
-            this.modeloTabla.removeRow(i);
-        }
         
-        ResultSet resultado = this.cons.ConsultarClientes();
-        try{
-            while(resultado.next()){
-                this.modeloTabla.addRow(new Object[]{resultado.getString("CÓDIGO"),resultado.getString("APELLIDOS"),resultado.getString("NOMBRES"),resultado.getString("TELEFONO"),resultado.getString("E-MAIL")});  
-            }
-        }
-        catch(SQLException e){
-            e.printStackTrace();
-        }
         return this.modeloTabla;
     } 
 
